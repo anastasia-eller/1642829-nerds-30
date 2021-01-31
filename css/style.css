@@ -1,0 +1,423 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto.woff2") format("woff2"),
+      url("../fonts/roboto.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotomedium.woff2") format("woff2"),
+      url("../fonts/robotomedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotobold.woff2") format("woff2"),
+        url("../fonts/robotobold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Variables */
+
+:root {
+
+  /* Background */
+  --top: #EEEEEE;
+  --main: #FFFFFF;
+
+  /* Text */
+  --basic-black: #000000;
+  --basic-dark-grey: #283136;
+  --basic-grey: #444444;
+  --basic-light-grey: #666666;
+  --basic-white: #FFFFFF;
+
+  /* Buttons, Lines*/
+  --basic-pink: #FB565A;
+  --basic-green: #00CA74;
+  --basic-yellow: #EFC849;
+  --grey: #EEEEEE;
+
+  /* Elements */
+  --filter-border: #4D4D4D;
+  --cart: #A6A6A6;
+  --social: #E1E1E1;
+  --border: #D7DCDE;
+
+  /* Special */
+  --hover-pink: #E74246;
+  --focus-pink: #D7373B;
+  --hover-green: #00BC6C;
+  --focus-green: #00AA62;
+  --hover-yellow: #EAB534;
+  --focus-yellow: #E5A722;
+  --hover-grey: #DFDFDF;
+  --focus-grey: #D5D5D5;
+  --focus-logo: #A6A6A6;
+  --hover-border: #B4B9BB;
+}
+
+/* Global */
+
+.page-body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: var(--main);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Main logo*/
+
+
+/* Main navigation */
+
+.main-navigation {
+
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  background-color: var(--top);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a:not([href]) {
+  background-color: var(--top);
+}
+
+/* User navigation */
+
+.site-navigation a,
+.cart-navigation a {
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover,
+.cart-navigation a:hover {
+  color: var(--basic-pink);
+}
+
+.site-navigation a:active,
+.cart-navigation a:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+/* Principles */
+
+.principles {
+  text-align: left;
+  background-color: var(--top);
+}
+
+.principles-slogan {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: var(--basic-black);
+}
+
+.principles-description {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-dark-grey);
+}
+
+/* Services */
+
+.services-list {
+  list-style: none;
+}
+
+.services-item {
+  text-align: left;
+}
+
+.services-item h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.services-item p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-dark-grey);
+}
+
+/* Buttons */
+
+.button {
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--basic-white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+}
+
+/* Principles, Services, Contacts, Modal Buttons */
+
+.principles-button,
+.websites-button,
+.contacts-button,
+.modal-button {
+  background-color: var(--basic-pink);
+}
+
+.principles-button:hover,
+.websites-button:hover {
+  background-color: var(--hover-pink);
+}
+
+.principles-button:focus,
+.websites-button:focus {
+  background-color: var(--focus-pink);
+}
+
+.apps-button {
+  background-color: var(--basic-green);
+}
+
+.apps-button:hover {
+  background-color: var(--hover-green);
+}
+
+.apps-button:focus {
+  background-color: var(--focus-green);
+}
+
+.presentations-button {
+  background-color: var(--basic-yellow);
+}
+
+.presentations-button:hover {
+  background-color: var(--hover-yellow);
+}
+
+.presentations-button:focus {
+  background-color: var(--focus-yellow);
+}
+
+/* About */
+
+.about-main {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+  color: var(--basic-black);
+}
+
+.about-description,
+.about-list {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--basic-dark-grey);
+}
+
+.about-orders {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--basic-dark-grey);
+}
+
+.about-list {
+  list-style: none;
+}
+
+.about-list li:before {
+  content:  "—";
+  position: relative;
+  left: -5px;
+  color: var(--basic-pink);
+  width: 2px;
+}
+
+/* Features */
+
+.features-intro {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.features-item {
+  font-size: 45px;
+  line-height: 64px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+.features-item span {
+  font-size: 26px;
+  line-height: 40px;
+  position:absolute;
+  top:5x;
+}
+
+.features-description {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-dark-grey);
+}
+
+/* Partners */
+
+.partners-list {
+  list-style: none;
+}
+
+.partners-item {
+  opacity: 0.2;
+}
+
+.partners-item:hover {
+  opacity: 1;
+}
+
+.partners-item:active {
+  opacity: 0.1;
+}
+
+/* Main footer */
+
+
+/* Contacts */
+
+.contacts-name {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.contacts-address,
+.contacts-phone {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-light-grey);
+}
+
+/* Social */
+
+.social-list {
+  list-style: none;
+}
+
+.social-button {
+  color: var(--basic-white);
+  background-color: var(--social)
+  }
+
+.social-button:hover {
+  background-color: var(--hover-pink);
+}
+
+.social-button:focus {
+  background-color: var(--focus-pink);
+}
+
+.social-button:focus svg{
+  opacity: 0.3;
+}
+
+/* Discount */
+
+.discount {
+  text-align: left;
+}
+
+.discount-main {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+.discount-social {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: var(--basic-grey);
+}
+
+/* Modal */
+
+.modal {
+  color: var(--basic-black);
+  background-color: var(--main);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal h2 {
+  font-size: 45px;
+  line-height: 53px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+.modal label {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+/* Feedback Form */
+
+.feedback-form input[type="email"],
+.feedback-form input[type="text"] {
+  font: inherit;
+  color: var(--basic-grey);
+  background-color: var(--basic-white);
+  border: 2px solid var(--border);
+  border-radius: 3px;
+}
+
+.feedback-form input:hover {
+  border-color: var(--hover-border);
+}
+
+.feedback-form input:active {
+  border-color: var(--basic-black);
+}
+
+.feedback-form input:invalid {
+  border-color: var(--hover-pink);
+}
