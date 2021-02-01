@@ -2,7 +2,8 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/roboto.woff2") format("woff2"),
+  src: local ("Roboto"),
+      url("../fonts/roboto.woff2") format("woff2"),
       url("../fonts/roboto.woff") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -10,7 +11,8 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/robotomedium.woff2") format("woff2"),
+  src: local ("Roboto Medium"),
+      url("../fonts/robotomedium.woff2") format("woff2"),
       url("../fonts/robotomedium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
@@ -18,8 +20,9 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/robotobold.woff2") format("woff2"),
-        url("../fonts/robotobold.woff") format("woff");
+  src: local ("Roboto Bold"),
+      url("../fonts/robotobold.woff2") format("woff2"),
+      url("../fonts/robotobold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -62,6 +65,7 @@
   --focus-grey: #D5D5D5;
   --focus-logo: #A6A6A6;
   --hover-border: #B4B9BB;
+  --border-button: #DBDBDB;
 }
 
 /* Global */
@@ -85,6 +89,11 @@ img {
 
 /* Main logo*/
 
+/*
+.main-header-logo svg:focus {
+  fill: var(--basic-light-grey);
+}
+*/
 
 /* Main navigation */
 
@@ -123,6 +132,12 @@ img {
   color: var(--basic-black);
   opacity: 0.3;
 }
+/*
+.site-navigation a:disabled,
+.cart-navigation a:disabled {
+  text-decoration: underline;
+}
+*/
 
 /* Principles */
 
@@ -184,22 +199,25 @@ img {
   border: none;
 }
 
-/* Principles, Services, Contacts, Modal Buttons */
+/* Principles, Services, Contacts, Modal, Filter, Catalog Buttons */
 
 .principles-button,
 .websites-button,
 .contacts-button,
-.modal-button {
+.modal-button,
+.catalog-button {
   background-color: var(--basic-pink);
 }
 
 .principles-button:hover,
-.websites-button:hover {
+.websites-button:hover,
+.catalog-button:hover {
   background-color: var(--hover-pink);
 }
 
 .principles-button:focus,
-.websites-button:focus {
+.websites-button:focus,
+.catalog-button:focus {
   background-color: var(--focus-pink);
 }
 
@@ -225,6 +243,19 @@ img {
 
 .presentations-button:focus {
   background-color: var(--focus-yellow);
+}
+
+.filter-button {
+  background-color: var(--grey);
+  color: var(--basic-black);
+}
+
+.filter-button:hover {
+  background-color: var(--hover-grey);
+}
+
+.filter-button:active {
+  background-color: var(--focus-grey);
 }
 
 /* About */
@@ -420,4 +451,141 @@ img {
 
 .feedback-form input:invalid {
   border-color: var(--hover-pink);
+}
+
+
+/* Catalog */
+
+.page-title {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+/* Filters */
+
+.filter legend {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.filter ul {
+  list-style: none;
+}
+
+.filter label,
+.filter-range,
+.filter-range input {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  color: var(--basic-dark-grey);
+}
+
+.filter label:disabled {
+  opacity: 0.3;
+}
+
+.filter-input-checkbox:hover,
+.filter-input-radio:hover {
+  color: var(--filter-border);
+}
+
+.filter-input-checkbox,
+.filter-input-radio {
+  opacity: 0.4;
+}
+
+.filter-input-checkbox:disabled,
+.filter-input-radio:disabled {
+  opacity: 0.1;
+}
+
+/* Sorting */
+
+.sorting-list {
+  list-style: none;
+}
+
+.sorting-element a,
+.sorting-price a {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  opacity: 0.3;
+}
+
+.sorting-element a:hover,
+.sorting-price a:hover {
+  opacity: 0.6;
+}
+
+.sorting-element a:active,
+.sorting-price a:active {
+  opacity: 1;
+}
+
+/* Catalog */
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+}
+
+.catalog-name {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.catalog-name:hover {
+  color: var(--basic-pink);
+}
+
+.catalog-name:active {
+  opacity: 0.3;
+}
+
+.catalog-description {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-light-grey)
+}
+
+/* Pagination */
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-black);
+  background-color: var(--grey);
+}
+
+.pagination-item a:hover {
+  background-color: var(--hover-grey);
+}
+
+.pagination-item a:active {
+  background-color: var(--focus-grey);
+}
+
+.pagination-item-current a {
+  background-color: var(--basic-white);
+  border: 3px solid var(--border-button);
+  border-radius: 3px;
 }
