@@ -259,7 +259,6 @@ img {
 }
 
 .slide-1 {
-  display: block;
   background-image: url(../img/nerds-index-slide1.png);
   width: 760;
   height: 431px;
@@ -289,6 +288,10 @@ img {
   padding: 0;
 }
 
+.slide-current {
+  display: block;
+}
+
 .slider-controls {
   display: flex;
   width: 100%;
@@ -297,6 +300,7 @@ img {
   bottom: 96px;
   left: 0;
   z-index: 20;
+  pointer-events: none;
 }
 
 .slider-controls button {
@@ -308,9 +312,10 @@ img {
   border-radius: 50%;
   cursor: pointer;
   margin-left: 17px;
+  pointer-events: all;
 }
 
-.current-button {
+.slider-controls .current {
   background-image: url(../img/circle.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -401,18 +406,21 @@ img {
 
 .principles-button:hover,
 .websites-button:hover,
-.catalog-button:hover {
+.catalog-button:hover,
+.contacts-button:hover {
   background-color: var(--hover-pink);
 }
 
 .principles-button:active,
 .websites-button:active,
-.catalog-button:active {
+.catalog-button:active,
+.contacts-button:active {
   background-color: var(--focus-pink);
 }
 
 .principles-button:active span,
-.filter-button:active span {
+.filter-button:active span,
+.contacts-button:active span {
   opacity: 0.3;
 }
 
@@ -755,7 +763,7 @@ img {
   grid-row: 1/2;
   grid-column: 1/2;
   text-align: center;
-  margin-left: 140px;
+  margin-left: 170px;
   margin-top: 54px;
   margin-bottom: 54px;
   background-color: var(--basic-white);
@@ -764,6 +772,8 @@ img {
 }
 
 .contacts-name {
+  padding-left: 50px;
+  text-align: left;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -774,6 +784,8 @@ img {
 
 .contacts-address,
 .contacts-phone {
+  padding-left: 50px;
+  text-align: left;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -782,7 +794,6 @@ img {
 
 .contacts-phone {
   margin-bottom: 40px;
-  padding: 0;
 }
 
 .contacts-phone a {
@@ -854,7 +865,7 @@ img {
 /* Modal */
 
 .modal {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
@@ -872,14 +883,16 @@ img {
   margin: auto;
 }
 
+.modal-active {
+  display: flex;
+}
+
 .modal h2 {
   font-size: 45px;
   line-height: 53px;
   font-weight: 700;
   color: var(--basic-black);
-  margin-left: 100px;
-  margin-top: 65px;
-  margin-bottom: 0;
+  margin: 65px 0px 0px 100px;
 }
 
 .modal label {
@@ -913,7 +926,8 @@ img {
 /* Feedback Form */
 
 .feedback-form input[type="email"],
-.feedback-form input[type="text"] {
+.feedback-form input[type="text"],
+.feedback-form textarea {
   font: inherit;
   color: var(--basic-grey);
   background-color: var(--basic-white);
@@ -921,15 +935,21 @@ img {
   border-radius: 3px;
 }
 
-.feedback-form input:hover {
+.feedback-form textarea {
+  resize: none;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
   border-color: var(--hover-border);
 }
 
-.feedback-form input:active {
+.feedback-form input:active,
+.feedback-form textarea:active {
   border-color: var(--basic-black);
 }
 
-.feedback-form input:invalid {
+.feedback-form input:invalid:not(:focus):not(:placeholder-shown) {
   border-color: var(--hover-pink);
 }
 
@@ -952,13 +972,13 @@ img {
   box-sizing: border-box;
 }
 
-.feedback-letter input {
+.feedback-letter textarea {
   width: 760px;
   height: 118px;
 }
 
-.feedback-letter input::placeholder {
-  transform: translateY(-30px) translateX(15px);
+.feedback-letter textarea::placeholder {
+  transform: translateY(20px) translateX(15px);
 }
 
 .feedback-letter {
@@ -983,7 +1003,7 @@ img {
 }
 
 .feedback-name {
-  margin-right: 40px;
+  margin-right: 35px;
 }
 
 /* Catalog Page */

@@ -40,7 +40,7 @@
         <h2 class="visually-hidden">Наши принципы</h2>
         <ul class="slider-list">
         <!-- Slide 1 -->
-        <li class="principles-item slide-1 active">
+        <li class="principles-item slide-1 slide-current">
         <p class="principles-slogan">Долго, дорого, скрупулезно.</p>
         <p class="principles-description">Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
           <a class="button principles-button" href="blank.html">
@@ -65,7 +65,7 @@
         </li>
         </ul>
         <div class="slider-controls">
-          <button class="current-button" type="button" aria-label="Первый слайд"></button>
+          <button class="current" type="button" aria-label="Первый слайд"></button>
           <button type="button" aria-label="Второй слайд"></button>
           <button type="button" aria-label="Третий слайд"></button>
         </div>
@@ -165,7 +165,9 @@
         <p class="contacts-address">191186, Санкт-Петербург,<br>
           ул. Б. Конюшенная, д. 19/8</p>
         <p class="contacts-phone">тел.<a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-        <button class="button contacts-button" type="button">Напишите нам</button>
+        <button class="button contacts-button" type="button">
+          <span>Напишите нам</span>
+        </button>
       </section>
 
         <div class="network container">
@@ -200,22 +202,22 @@
       </div>
     </footer>
 
-      <section class="modal">
+      <section class="modal modal-active">
         <h2>Напишите нам</h2>
         <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <div class="feedback-top">
         <p class="feedback-item feedback-name">
           <label for="name">Ваше имя:</label>
-          <input id="name" type="text" name="name" placeholder="Имя Фамилия">
+          <input id="name" type="text" name="name" required placeholder="Имя Фамилия">
         </p>
         <p class="feedback-item feedback-email">
           <label for="login">Ваш email:</label>
-          <input id="login" type="email" name="login" placeholder="email@example.com">
+          <input id="login" type="email" name="login" required placeholder="email@example.com">
         </p>
         </div>
         <p class="feedback-item feedback-letter">
           <label for="text">Текст письма:</label>
-          <input id="text" type="text" name="text" placeholder="В свободной форме">
+          <textarea name="text" required placeholder="В свободной форме"></textarea>
         </p>
         <button class="button modal-button" type="submit">Отправить</button>
         </form>
