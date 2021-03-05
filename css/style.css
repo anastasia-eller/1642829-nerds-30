@@ -76,7 +76,7 @@
   min-width: 1157px;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   background-color: var(--main);
 
   min-height: 100%;
@@ -99,7 +99,7 @@ img {
 .main-header-logo {
   justify-self: left;
   margin-top: 49px;
-  margin-right: 158px;
+  margin-right: 157px;
 }
 
 .main-header-logo path {
@@ -225,7 +225,7 @@ a.navigation-active {
   display: grid;
   position: relative;
   min-width: 1157px;
-  min-height: 431px;
+  height: 424px;
   background-color: var(--top);
 }
 
@@ -237,7 +237,7 @@ a.navigation-active {
 
 .principles-slogan {
   margin: 0px;
-  padding-top: 68px;
+  padding-top: 72px;
   max-width: 538px;
   font-size: 55px;
   line-height: 55px;
@@ -246,7 +246,7 @@ a.navigation-active {
 }
 
 .principles-description {
-  margin-top: 25px;
+  margin-top: 26px;
   max-width: 416px;
   font-size: 16px;
   line-height: 24px;
@@ -269,7 +269,7 @@ a.navigation-active {
   width: 760;
   height: 431px;
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: right -7px;
   margin: 0;
   padding: 0;
 }
@@ -279,7 +279,7 @@ a.navigation-active {
   width: 760;
   height: 431px;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right -7px;
   margin: 0;
   padding: 0;
 }
@@ -289,7 +289,7 @@ a.navigation-active {
   width: 760;
   height: 431px;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right -7px;
   margin: 0;
   padding: 0;
 }
@@ -304,7 +304,7 @@ a.navigation-active {
   justify-content: center;
   position: absolute;
   bottom: 96px;
-  left: 0;
+  left: -9px;
   z-index: 20;
   pointer-events: none;
 }
@@ -330,14 +330,14 @@ a.navigation-active {
 /* Services */
 
 .services {
-  margin-bottom: 80px;
   margin-top: 80px;
+  margin-bottom: 94px;
 }
 
 .services-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 100px;
+  column-gap: 40px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -354,6 +354,7 @@ a.navigation-active {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--basic-black);
+  margin-bottom: 17px;
 }
 
 .services-item p {
@@ -361,12 +362,13 @@ a.navigation-active {
   line-height: 24px;
   font-weight: 400;
   color: var(--basic-dark-grey);
-  margin-bottom: 38px;
+  margin-bottom: 48px;
 }
 
 .websites::before {
   content: "";
   background-image: url("../img/index/websites.png");
+  background-color: var(--basic-pink);
   display: block;
   width: 300px;
   height: 146px;
@@ -375,6 +377,7 @@ a.navigation-active {
 .apps::before {
   content: "";
   background-image: url("../img/index/apps.png");
+  background-color: var(--basic-green);
   display: block;
   width: 300px;
   height: 146px;
@@ -383,6 +386,7 @@ a.navigation-active {
 .presentations::before {
   content: "";
   background-image: url("../img/index/presentations.png");
+  background-color: var(--basic-yellow);
   display: block;
   width: 300px;
   height: 146px;
@@ -401,6 +405,10 @@ a.navigation-active {
   text-transform: uppercase;
   border: none;
   background-color: var(--basic-pink);
+}
+
+.button:active {
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 /* Principles, Services, Contacts, Modal, Filter, Catalog Buttons */
@@ -490,7 +498,6 @@ a.navigation-active {
   background-color: var(--focus-grey);
 }
 
-
 .modal-button {
   padding: 16px 83px;
   border-radius: 3px;
@@ -528,7 +535,7 @@ a.navigation-active {
 .index-columns {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  margin-bottom: 73px;
+  margin-bottom: 12px;
 }
 
 /* About */
@@ -542,6 +549,8 @@ a.navigation-active {
   line-height: 45px;
   font-weight: 500;
   color: var(--basic-black);
+  margin-top: 76px;
+  margin-bottom: 33px;
 }
 
 .about-description,
@@ -553,7 +562,7 @@ a.navigation-active {
 }
 
 .about-description {
-  margin-bottom: 50px;
+  margin-bottom: 41px;
 }
 
 .about-orders {
@@ -562,7 +571,7 @@ a.navigation-active {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--basic-dark-grey);
-  padding-bottom: 24px;
+  padding-bottom: 7px;
 }
 
 .about-list {
@@ -575,11 +584,12 @@ a.navigation-active {
   border: none;
   background-color: var(--basic-pink);
   display: inline-block;
+  vertical-align: middle;
   color: var(--basic-pink);
   height: 2px;
   width: 25px;
   position: absolute;
-  top: 25%;
+  top: 23%;
   left: 0;
 }
 
@@ -604,6 +614,7 @@ a.navigation-active {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--basic-black);
+  margin-left: 34px;
   margin-bottom: 31px;
 }
 
@@ -619,15 +630,27 @@ a.navigation-active {
   font-weight: 700;
   color: var(--basic-black);
   grid-row: 1 / 2;
-  margin: 0;
   margin-bottom: 10px;
+  padding: 0;
+}
+
+.feature-first {
+  margin-left: 12px;
+}
+
+.feature-second {
+  padding-right: 8px;
+}
+
+.feature-third {
+  padding-right: 57px;
 }
 
 .features-item span {
   font-size: 26px;
   line-height: 40px;
-  position:absolute;
-  top:5x;
+  position: absolute;
+  padding-top: 3px;
 }
 
 .features-description {
@@ -636,7 +659,19 @@ a.navigation-active {
   font-weight: 400;
   color: var(--basic-dark-grey);
   text-align: left;
-  margin-left: 30px;
+  margin: 0;
+}
+
+.description-first {
+  margin-left: 32px;
+}
+
+.description-second {
+  margin-left: 22px;
+}
+
+.description-third {
+  margin-left: 10px;
 }
 
 .features::before {
@@ -648,7 +683,7 @@ a.navigation-active {
   background-repeat: no-repeat;
   margin-bottom: 37px;
   margin-left: 30px;
-  margin-top: 39px;
+  margin-top: 42px;
 }
 
 /* Partners */
@@ -679,7 +714,7 @@ a.navigation-active {
   width: 1157px;
   margin: 0 auto;
   padding: 0;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
   justify-self: center;
 }
 
@@ -689,8 +724,8 @@ a.navigation-active {
   list-style: none;
   justify-content: space-between;
   align-items: center;
-  padding-top: 44px;
-  padding-bottom: 20px;
+  padding: 51px 40px 20px 30px;
+  margin-top: 22px;
 }
 
 .partners-item {
@@ -710,15 +745,17 @@ a.navigation-active {
 }
 
 .academy img {
-  margin-right: 48px;
+  margin-right: 47px;
 }
 
 .borodinski img {
-  margin-right: 44px;
+  margin-right: 43px;
+  margin-left: -19px
 }
 
 .pink img {
   margin-right: 55px;
+  margin-left: -8px
 }
 
 .partners-item::after {
@@ -764,6 +801,7 @@ a.navigation-active {
   max-width: 100%;
   display: block;
   width: 100%;
+  background-color: var(--basic-light-grey);
 }
 
 .contacts {
@@ -787,6 +825,7 @@ a.navigation-active {
   text-transform: uppercase;
   color: var(--basic-black);
   margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .contacts-address,
@@ -800,7 +839,7 @@ a.navigation-active {
 }
 
 .contacts-address {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 }
 
 .contacts-phone {
@@ -1298,7 +1337,7 @@ a.navigation-active {
   display: flex;
   flex-wrap: wrap;
   margin-top: 25px;
-  padding: 0;
+  padding-right: 22px;
 }
 
 .sorting-element {
@@ -1319,6 +1358,7 @@ a.navigation-active {
   opacity: 0.6;
 }
 
+.sorting-element a.active,
 .sorting-element a:active {
   opacity: 1;
 }
@@ -1490,7 +1530,7 @@ a.navigation-active {
 }
 
 .pagination-item {
-  margin-right: 11px;
+  margin-right: 13px;
 }
 
 .pagination-item a {
@@ -1501,24 +1541,21 @@ a.navigation-active {
   color: var(--basic-black);
   background-color: var(--grey);
   border-radius: 3px;
-  padding: 13px 18px;
-  border: 3px solid var(--grey);
+  padding: 16px 20px;
 }
 
 .pagination-item-current a {
   background-color: var(--basic-white);
-  border: 3px solid var(--border-button);
-  border-radius: 3px;
+  box-shadow: inset 0 0 0 3px var(--border-button);
 }
 
 .pagination-item a:hover {
   background-color: var(--hover-grey);
-  border-color: var(--hover-grey);
 }
 
 .pagination-item a:active {
   background-color: var(--focus-grey);
-  border-color: var(--focus-grey);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 .pagination-link:active span {

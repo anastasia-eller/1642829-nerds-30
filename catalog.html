@@ -5,10 +5,10 @@
     <title>Каталог: Нёрдс</title>
 
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+×ml">
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/180.png">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
@@ -40,6 +40,7 @@
       <div class="page-catalog container">
 
         <section class="sorting-all">
+          <h2 class= "visually-hidden">Сортировка товаров</h2>
           <div class="sorting">
             <p class="sorting-main">Сортировать:</p>
             <ul class="sorting-list">
@@ -234,6 +235,7 @@
               </li>
             </ul>
         </section>
+      </div>
     </main>
 
     <footer class="main-footer">
@@ -299,7 +301,7 @@
         </div>
         <p class="feedback-item feedback-letter">
           <label for="text">Текст письма:</label>
-          <textarea name="text" required placeholder="В свободной форме"></textarea>
+          <textarea id="text" name="text" required placeholder="В свободной форме"></textarea>
         </p>
         <button class="button modal-button" type="submit">Отправить</button>
       </form>
