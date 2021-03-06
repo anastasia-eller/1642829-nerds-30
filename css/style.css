@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Roboto";
-  src: local ("Roboto"),
+  src: local("Roboto"),
       url("../fonts/roboto.woff2") format("woff2"),
       url("../fonts/roboto.woff") format("woff");
   font-weight: 400;
@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: "Roboto";
-  src: local ("Roboto Medium"),
+  src: local("Roboto Medium"),
       url("../fonts/robotomedium.woff2") format("woff2"),
       url("../fonts/robotomedium.woff") format("woff");
   font-weight: 500;
@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: "Roboto";
-  src: local ("Roboto Bold"),
+  src: local("Roboto Bold"),
       url("../fonts/robotobold.woff2") format("woff2"),
       url("../fonts/robotobold.woff") format("woff");
   font-weight: 700;
@@ -622,6 +622,9 @@ a.navigation-active {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  column-gap: 10px;
+  margin-left: 32px;
+  margin-right: 10px;
 }
 
 .features-item {
@@ -629,21 +632,10 @@ a.navigation-active {
   line-height: 64px;
   font-weight: 700;
   color: var(--basic-black);
+  text-align: left;
   grid-row: 1 / 2;
   margin-bottom: 10px;
   padding: 0;
-}
-
-.feature-first {
-  margin-left: 12px;
-}
-
-.feature-second {
-  padding-right: 8px;
-}
-
-.feature-third {
-  padding-right: 57px;
 }
 
 .features-item span {
@@ -660,18 +652,6 @@ a.navigation-active {
   color: var(--basic-dark-grey);
   text-align: left;
   margin: 0;
-}
-
-.description-first {
-  margin-left: 32px;
-}
-
-.description-second {
-  margin-left: 22px;
-}
-
-.description-third {
-  margin-left: 10px;
 }
 
 .features::before {
@@ -733,6 +713,7 @@ a.navigation-active {
 }
 
 .partners-item a {
+  display: block;
   opacity: 0.2;
 }
 
@@ -770,6 +751,7 @@ a.navigation-active {
   padding: 0;
   vertical-align: middle;
   top: 50%;
+  right: 0;
   transform: translateY(-50%);
 }
 
@@ -886,11 +868,11 @@ a.navigation-active {
   background-color: var(--hover-pink);
 }
 
-.social-button:focus {
+.social-button:active {
   background-color: var(--focus-pink);
 }
 
-.social-button:focus svg {
+.social-button:active svg {
   opacity: 0.3;
 }
 
@@ -1189,9 +1171,9 @@ a.navigation-active {
   content: "";
   position: absolute;
   top: 0px;
-  left: -40px;
-  width: 30px;
-  height: 30px;
+  left: -36px;
+  width: 25px;
+  height: 25px;
   border: transparent;
   background-image: url("../img/catalog/checkbox_on.svg");
   background-repeat: no-repeat;
@@ -1537,6 +1519,7 @@ a.navigation-active {
   display: block;
   font-size: 16px;
   line-height: 18px;
+  font-weight: 500;
   text-transform: uppercase;
   color: var(--basic-black);
   background-color: var(--grey);
