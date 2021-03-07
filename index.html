@@ -65,9 +65,9 @@
           </li>
         </ul>
         <div class="slider-controls">
-          <button class="current" type="button" aria-label="Первый слайд"></button>
-          <button type="button" aria-label="Второй слайд"></button>
-          <button type="button" aria-label="Третий слайд"></button>
+          <button class="current control-1" type="button" aria-label="Первый слайд"></button>
+          <button class="control-2" type="button" aria-label="Второй слайд"></button>
+          <button class="control-3" type="button" aria-label="Третий слайд"></button>
         </div>
       </section>
     </div>
@@ -157,7 +157,7 @@
 
   <footer class="main-footer">
     <div class="contacts-map">
-      <img src="img/map.png" width="1440" height="416" alt="Маршрут проезда к студии">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002876!2d30.320858715800814!3d59.93871916905456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1615120484034!5m2!1sen!2sru" width="1440" height="416" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
     <section class="contacts">
       <h2 class= "visually-hidden">Контактная информация</h2>
@@ -165,9 +165,9 @@
       <p class="contacts-address">191186, Санкт-Петербург,<br>
         ул. Б. Конюшенная, д. 19/8</p>
       <p class="contacts-phone">тел.<a href="tel:+78122757575"> +7 (812) 275-75-75</a></p>
-      <button class="button contacts-button" type="button">
+      <a class="button contacts-button" href="login.html">
         <span>Напишите нам</span>
-      </button>
+      </a>
     </section>
 
     <div class="network container">
@@ -224,25 +224,9 @@
       <button class="modal-close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
-  </section>
+    </section>
 
-  <script>
-
-    const link = document.querySelector(".contacts-button");
-    const popup = document.querySelector(".modal");
-    const close = document.querySelector(".modal-close");
-    const name = popup.querySelector("[name=name]");
-
-    link.addEventListener("click", function () {
-      popup.classList.add("modal-active");
-      name.focus ();
-    });
-
-    close.addEventListener("click", function () {
-      popup.classList.remove("modal-active");
-    });
-
-  </script>
+    <script src="js/script.js"></script>
 
   </body>
 </html>
