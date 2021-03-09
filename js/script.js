@@ -31,10 +31,10 @@ button.addEventListener("click", function (evt) {
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.remove("modal-active");
-  loginPopup.classList.remove("modal-error");
+  popup.classList.remove("modal-error");
 });
 
-login.addEventListener("submit", function (evt) {
+form.addEventListener("submit", function (evt) {
   if (!login.value || !email.value) {
     evt.preventDefault();
     popup.classList.remove("modal-error");

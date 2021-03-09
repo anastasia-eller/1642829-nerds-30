@@ -278,9 +278,9 @@ a.navigation-active {
 .slide-2 {
   background-image: url(../img/nerds-index-slide2.png);
   width: 760;
-  height: 431px;
+  height: 424px;
   background-repeat: no-repeat;
-  background-position: right -7px;
+  background-position: right -1px;
   margin: 0;
   padding: 0;
 }
@@ -793,10 +793,11 @@ a.navigation-active {
   text-align: center;
   margin-left: 140px;
   margin-top: 54px;
-  margin-bottom: 54px;
+  margin-bottom: auto;
+  padding-bottom: 47px;
   background-color: var(--basic-white);
   width: 319px;
-  height: 308px;
+  min-height: 260px;
   z-index: 150;
 }
 
@@ -827,7 +828,7 @@ a.navigation-active {
 }
 
 .contacts-phone {
-  margin-bottom: 38px;
+  margin-bottom: 55px;
 }
 
 .contacts-phone a {
@@ -839,7 +840,7 @@ a.navigation-active {
 .network {
   display: flex;
   padding-bottom: 68px;
-  padding-top: 67px;
+  padding-top: 62px;
   width: 1157px;
 }
 
@@ -1263,6 +1264,7 @@ a.navigation-active {
   border-color: var(--basic-grey);
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: 4px;
 }
 
 .range-controls {
@@ -1383,8 +1385,11 @@ a.navigation-active {
   opacity: 0.6;
 }
 
-.sorting-element a.active,
 .sorting-element a:active {
+  opacity: 1;
+}
+
+.sorting-active a {
   opacity: 1;
 }
 
@@ -1418,6 +1423,11 @@ a.navigation-active {
 
 .sorting-price a:active {
   filter: brightness(0%);
+}
+
+.sorting-price .price-active {
+  filter: brightness(0%);
+  opacity: 1;
 }
 
 /* Catalog */
