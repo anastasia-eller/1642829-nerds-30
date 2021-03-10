@@ -68,6 +68,7 @@
   --focus-logo: #A6A6A6;
   --hover-border: #B4B9BB;
   --border-button: #DBDBDB;
+  --range-controls: #cfcfcf;
 }
 
 /* Global */
@@ -226,7 +227,7 @@ a.navigation-active {
   display: grid;
   position: relative;
   min-width: 1157px;
-  height: 424px;
+  min-height: 431px;
   background-color: var(--top);
 }
 
@@ -267,30 +268,27 @@ a.navigation-active {
 
 .slide-1 {
   background-image: url(../img/nerds-index-slide1.png);
-  width: 760;
-  height: 431px;
+  height: 100%;
   background-repeat: no-repeat;
-  background-position: right -7px;
+  background-position: right;
   margin: 0;
   padding: 0;
 }
 
 .slide-2 {
   background-image: url(../img/nerds-index-slide2.png);
-  width: 760;
-  height: 424px;
+  height: 100%;
   background-repeat: no-repeat;
-  background-position: right -1px;
+  background-position: right;
   margin: 0;
   padding: 0;
 }
 
 .slide-3 {
   background-image: url(../img/nerds-index-slide3.png);
-  width: 760;
-  height: 431px;
+  height: 100%;
   background-repeat: no-repeat;
-  background-position: right -7px;
+  background-position: right;
   margin: 0;
   padding: 0;
 }
@@ -417,6 +415,7 @@ a.navigation-active {
 .principles-button {
   padding: 17px 54px;
   border-radius: 3px;
+  margin-bottom: 80px;
 }
 
 .principles-button:hover,
@@ -1299,7 +1298,7 @@ a.navigation-active {
   border: 8px solid var(--basic-white);
   background-color: var(--toggle);
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
+  box-shadow: 0 2px 1px 0 var(--range-controls);
   cursor: pointer;
 }
 
@@ -1537,7 +1536,8 @@ a.navigation-active {
 .catalog-item-hover {
   background-color: var(--top);
   width: 360px;
-  height: 231px;
+  min-height: 187px;
+  padding-bottom: 44px;
   display: none;
   position:absolute;
   border-bottom-left-radius: 5px;
