@@ -6,6 +6,7 @@ const close = popup.querySelector(".modal-close");
 const form = popup.querySelector(".feedback-form");
 const login = popup.querySelector("[name=name]");
 const email = popup.querySelector("[name=login]");
+const myModalButton = form.querySelector(".modal-button");
 
 let isStorageSupport = true;
 let storage = "";
@@ -34,7 +35,7 @@ close.addEventListener("click", function (evt) {
   popup.classList.remove("modal-error");
 });
 
-form.addEventListener("submit", function (evt) {
+myModalButton.addEventListener("click", function (evt) {
   if (!login.value || !email.value) {
     evt.preventDefault();
     popup.classList.remove("modal-error");
